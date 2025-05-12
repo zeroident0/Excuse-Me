@@ -1,0 +1,157 @@
+:root {
+    --primary-color: #4a90e2;
+    --primary-hover: #357abd;
+    --background-color: #f5f7fa;
+    --text-color: #2c3e50;
+    --container-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px;
+    width: 90%;
+    padding: 2rem;
+    background-color: var(--container-bg);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.excuse-container {
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+#excuse {
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+
+.button-row {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.copy-btn {
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--text-color);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn:hover {
+    opacity: 1;
+    background: none;
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
+.copy-btn:active {
+    transform: scale(0.95);
+}
+
+.copy-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.copy-btn.copied {
+    color: #2ecc71;
+    opacity: 1;
+}
+
+button {
+    margin-top: 1.5rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px var(--shadow-color);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #excuse {
+        font-size: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 20px;
+    }
+}
